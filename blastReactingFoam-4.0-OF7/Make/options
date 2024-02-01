@@ -1,0 +1,36 @@
+EXE_INC= \
+    -Isrc/finiteVolume/lnInclude \
+    -Isrc/fluxSchemes/lnInclude \
+    -Isrc/timeIntegrators/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/lnInclude \
+    -I$(LIB_SRC)/dynamicFvMesh/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/TurbulenceModels/turbulenceModels/lnInclude \
+    -I$(LIB_SRC)/TurbulenceModels/compressible/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/reactionThermo/lnInclude \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/chemistryModel/lnInclude \
+    -I$(LIB_SRC)/ODE/lnInclude \
+    -I$(LIB_SRC)/combustionModels/lnInclude \
+    -I$(LIB_SRC)/radiationModels/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -IreactingCompressibleSystem
+
+EXE_LIBS = \
+    -lturbulenceModels \
+    -lcompressibleTurbulenceModels \
+    -lreactionThermophysicalModels \
+    -lspecie \
+    -lcompressibleTransportModels \
+    -lfluidThermophysicalModels \
+    -lchemistryModel \
+    -lODE \
+    -lcombustionModels \
+    -lradiationModels \
+    -ldynamicMesh \
+    -ldynamicFvMesh \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfluxSchemes \
+    -ltimeIntegrators
